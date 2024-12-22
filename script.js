@@ -26,7 +26,36 @@ document.getElementById("generate-link").addEventListener("click", function () {
 
     // Affiche un message pour l'utilisateur qui partage
     document.getElementById("message").innerHTML = `<h2>Vous souhaitez une Bonne Année 2025 en tant que ${userName} ! 🎉</h2>`;
+
+    // Configure les boutons de partage
+    configureShareButtons(link);
   } else {
     alert("Veuillez entrer un prénom !");
   }
 });
+
+// Bouton pour copier le lien
+document.getElementById("copy-link").addEventListener("click", function () {
+  const linkInput = document.getElementById("share-link");
+  linkInput.select(); // Sélectionne le texte
+  linkInput.setSelectionRange(0, 99999); // Pour mobile
+  document.execCommand("copy"); // Copie dans le presse-papiers
+  alert("Lien copié dans le presse-papiers !");
+});
+
+// Configure les boutons de partage
+function configureShareButtons(link) {
+  // Partage via WhatsApp
+  const whatsappButton = document.getElementById("share-whatsapp");
+  whatsappButton.onclick = function () {
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent("Je te souhaite une Bonne Année 2025 ! Voici un lien pour partager tes vœux : " + link)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
+  // Partage via Facebook
+  const facebookButton = document.getElementById("share-facebook");
+  facebookButton.onclick = function () {
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
+    window.open(facebookUrl, "_blank");
+  };
+}
