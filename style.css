@@ -1,3 +1,4 @@
+/* Style général */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -16,10 +17,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Titres */
 h3 {
   color: #ff6347;
 }
 
+/* Entrées de texte */
 input[type="text"] {
   width: 80%;
   padding: 10px;
@@ -29,6 +32,7 @@ input[type="text"] {
   font-size: 16px;
 }
 
+/* Boutons généraux */
 button {
   padding: 10px 20px;
   background-color: #ff6347;
@@ -37,12 +41,61 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #e55347;
 }
 
+/* Section de partage */
 #share-section {
   margin-top: 20px;
+}
+
+/* Boutons de partage spécifiques */
+#social-buttons {
+  margin-top: 15px;
+}
+
+#social-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+#share-whatsapp {
+  background-color: #25d366; /* Couleur WhatsApp */
+}
+
+#share-facebook {
+  background-color: #1877f2; /* Couleur Facebook */
+}
+
+#social-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Lien copiable */
+#share-link {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+}
+
+#share-link:focus {
+  outline: none;
+  border-color: #ff6347;
 }
