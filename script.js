@@ -5,9 +5,11 @@ window.onload = function () {
 
   if (senderName) {
     // Affiche un message de vœux personnalisé
-    document.getElementById("message").innerHTML = `<h2>${senderName} vous souhaite une Bonne et Heureuse Année 2025 ! 🎉</h2>`;
-    document.getElementById("form-section").style.display = "none"; // Cache le formulaire
+    document.getElementById("message").innerHTML = `<h2>${senderName} vous souhaite une Bonne et Heureuse Année 2024 ! 🎉</h2>`;
   }
+
+  // Le formulaire reste visible pour permettre à l'utilisateur de générer son propre lien
+  document.getElementById("form-section").style.display = "block";
 };
 
 // Génère un lien personnalisé
@@ -21,6 +23,9 @@ document.getElementById("generate-link").addEventListener("click", function () {
 
     // Affiche la section de partage
     document.getElementById("share-section").style.display = "block";
+
+    // Affiche un message pour l'utilisateur qui partage
+    document.getElementById("message").innerHTML = `<h2>Vous souhaitez une Bonne Année 2024 en tant que ${userName} ! 🎉</h2>`;
   } else {
     alert("Veuillez entrer un prénom !");
   }
