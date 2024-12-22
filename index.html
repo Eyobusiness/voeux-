@@ -14,7 +14,7 @@
     </div>
 
     <div id="form-section">
-      <p>Entrez votre prénom et partager vos vœux :</p>
+      <p>Entrez votre prénom et partagez vos vœux :</p>
       <input type="text" id="user-name" placeholder="Votre prénom" />
       <button id="generate-link">Générer un lien</button>
     </div>
@@ -22,11 +22,16 @@
     <div id="share-section" style="display: none;">
       <p>Voici votre lien à partager :</p>
       <input type="text" id="share-link" readonly />
-      <p>Partagez ce lien avec vos amis pour leur souhaiter une Bonne Année !</p>
+      <button id="copy-link">Copier le lien</button>
+
+      <p>Ou partagez directement :</p>
+      <div id="social-buttons">
+        <button id="share-whatsapp">Partager sur WhatsApp</button>
+        <button id="share-facebook">Partager sur Facebook</button>
+      </div>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
-  </html>
-  
+</html>
