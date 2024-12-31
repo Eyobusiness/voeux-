@@ -5,7 +5,7 @@ window.onload = function () {
 
   if (senderName) {
     // Affiche un message de vœux personnalisé
-    document.getElementById("message").innerHTML = `<h2>${senderName} vous souhaite une Bonne et Heureuse Année 2025 ! 🎉</h2>`;
+    document.getElementById("message").innerHTML = `<h2>${senderName} vous souhaite une Bonne et Heureuse Année 2025 ! 🎉 <br>Que cette nouvelle année vous apporte bonheur, santé et réussite. Profitez de chaque instant avec vos proches et réalisez vos rêves les plus chers." 🎉 </h2>`;
   }
 
   // Le formulaire reste visible pour permettre à l'utilisateur de générer son propre lien
